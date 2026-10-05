@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { 
@@ -15,6 +15,7 @@ import {
   Moon, 
   Play, 
   Pause, 
+  RotateCcw,
   CheckSquare, 
   Zap,
   Flame,
@@ -55,7 +56,26 @@ export const LandingPage: React.FC = () => {
     2: true,
   });
   const [mockTimerRunning, setMockTimerRunning] = useState(false);
-  const [mockTimerSeconds] = useState(1477); // 24:37
+  const [mockTimerSeconds, setMockTimerSeconds] = useState(1477); // 24:37
+
+  // Active countdown timer when mock focus mode is running
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval> | null = null;
+    if (mockTimerRunning) {
+      interval = setInterval(() => {
+        setMockTimerSeconds((prev) => {
+          if (prev <= 1) {
+            setMockTimerRunning(false);
+            return 1500;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [mockTimerRunning]);
 
   const toggleMockCheck = (index: number) => {
     setMockChecked(prev => ({ ...prev, [index]: !prev[index] }));
@@ -235,7 +255,10 @@ export const LandingPage: React.FC = () => {
                 Overview
               </button>
               <button
-                onClick={() => setActivePreviewTab('focus')}
+                onClick={() => {
+                  setActivePreviewTab('focus');
+                  setMockTimerRunning(true);
+                }}
                 className={`px-3 py-1 rounded-md font-medium transition-colors cursor-pointer ${
                   activePreviewTab === 'focus'
                     ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-2xs'
@@ -276,7 +299,13 @@ export const LandingPage: React.FC = () => {
                     <p className="text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-100 mt-1">12</p>
                     <p className="text-[11px] text-emerald-600 mt-1">5 completed today</p>
                   </div>
-                  <div className="hero-card-silver p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer">
+                  <div 
+                    onClick={() => {
+                      setActivePreviewTab('focus');
+                      setMockTimerRunning(true);
+                    }}
+                    className="hero-card-silver p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer"
+                  >
                     <p className="text-xs text-zinc-400 font-medium">Focus</p>
                     <p className="text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-100 mt-1">3h 42m</p>
                     <p className="text-[11px] text-indigo-600 mt-1">92% of daily target</p>
@@ -325,40 +354,65 @@ export const LandingPage: React.FC = () => {
               </div>
             )}
 
-            {activePreviewTab === 'focus' && (
-              <div className="text-center py-6 animate-in fade-in duration-150 space-y-4">
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">
-                  Focus Session
-                </span>
-                <div className="text-6xl font-extrabold font-mono tracking-tight text-zinc-900 dark:text-zinc-100">
-                  {formatMockTime(mockTimerSeconds)}
-                </div>
-                <div className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
-                  Mathematics
-                </div>
-                <div className="pt-2">
-                  <Button
-                    onClick={() => setMockTimerRunning(!mockTimerRunning)}
-                    variant="primary"
-                    size="md"
-                    icon={mockTimerRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                    className="w-32"
-                  >
-                    {mockTimerRunning ? 'Pause' : 'Start'}
-                  </Button>
-                </div>
-                <div className="max-w-xs mx-auto pt-4">
-                  <div className="flex justify-between text-[11px] text-zinc-400 mb-1">
-                    <span>Session progress</span>
-                    <span>72%</span>
+            {activePreviewTab === 'focus' && (() => {
+              const elapsedMock = 1500 - mockTimerSeconds;
+              const mockProgressPercent = Math.min(100, Math.max(0, Math.round((elapsedMock / 1500) * 100)));
+
+              return (
+                <div className="text-center py-6 animate-in fade-in duration-150 space-y-4">
+                  <div className="flex items-center justify-center gap-2">
+                    <span className={`w-2 h-2 rounded-full ${mockTimerRunning ? 'bg-emerald-500 animate-pulse' : 'bg-zinc-400'}`} />
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">
+                      {mockTimerRunning ? 'Active Focus Session' : 'Focus Session (Paused)'}
+                    </span>
                   </div>
-                  <div className="w-full bg-zinc-200 dark:bg-zinc-800 h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-brand-600 dark:bg-brand-500 h-full w-[72%]" />
+                  <div className="text-6xl font-extrabold font-mono tracking-tight text-zinc-900 dark:text-zinc-100">
+                    {formatMockTime(mockTimerSeconds)}
                   </div>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                    Mathematics
+                  </div>
+                  <div className="pt-2 flex items-center justify-center gap-2">
+                    <Button
+                      onClick={() => setMockTimerRunning(!mockTimerRunning)}
+                      variant="primary"
+                      size="md"
+                      icon={mockTimerRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                      className="w-32"
+                    >
+                      {mockTimerRunning ? 'Pause' : 'Start'}
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        setMockTimerRunning(false);
+                        setMockTimerSeconds(1500);
+                      }}
+                      variant="outline"
+                      size="md"
+                      icon={<RotateCcw className="w-3.5 h-3.5" />}
+                      title="Reset preview timer"
+                    />
+                  </div>
+                  <div className="max-w-xs mx-auto pt-4">
+                    <div className="flex justify-between text-[11px] text-zinc-400 mb-1">
+                      <span>Session progress</span>
+                      <span>{mockProgressPercent}%</span>
+                    </div>
+                    <div className="w-full bg-zinc-200 dark:bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                      <div 
+                        className="bg-brand-600 dark:bg-brand-500 h-full transition-all duration-300"
+                        style={{ width: `${mockProgressPercent}%` }} 
+                      />
+                    </div>
+                  </div>
+                  <p className="text-xs text-zinc-400 pt-1">
+                    Today's focus: 2h 18m • <span className={mockTimerRunning ? 'text-emerald-500 font-medium' : 'text-zinc-400'}>
+                      {mockTimerRunning ? 'Countdown active' : 'Click start to resume'}
+                    </span>
+                  </p>
                 </div>
-                <p className="text-xs text-zinc-400 pt-1">Today's focus: 2h 18m</p>
-              </div>
-            )}
+              );
+            })()}
 
             {activePreviewTab === 'notes' && (
               <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 animate-in fade-in duration-150 space-y-3">
