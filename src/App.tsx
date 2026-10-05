@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { AppProvider } from './context/AppContext';
 
@@ -19,7 +19,7 @@ export function App() {
   return (
     <ThemeProvider>
       <AppProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             {/* Landing & Marketing */}
             <Route path="/" element={<LandingPage />} />
@@ -42,7 +42,7 @@ export function App() {
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AppProvider>
     </ThemeProvider>
   );
