@@ -104,7 +104,7 @@ export const OverviewPage: React.FC = () => {
         {/* Tasks Card */}
         <div 
           onClick={() => navigate('/dashboard/tasks')}
-          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group"
+          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group hero-card-silver"
         >
           <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 text-xs">
             <span className="font-medium">Today's Tasks</span>
@@ -127,7 +127,7 @@ export const OverviewPage: React.FC = () => {
         {/* Focus Card */}
         <div 
           onClick={() => navigate('/dashboard/focus')}
-          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group"
+          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group hero-card-silver"
         >
           <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 text-xs">
             <span className="font-medium">Focus Time</span>
@@ -150,7 +150,7 @@ export const OverviewPage: React.FC = () => {
         {/* Streak Card */}
         <div 
           onClick={() => navigate('/dashboard/analytics')}
-          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group"
+          className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer group hero-card-silver"
         >
           <div className="flex items-center justify-between text-zinc-500 dark:text-zinc-400 text-xs">
             <span className="font-medium">Productivity Streak</span>
@@ -173,7 +173,7 @@ export const OverviewPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Today's Tasks */}
         <div className="lg:col-span-2 space-y-4">
-          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
             <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800/80">
               <div className="flex items-center gap-2">
                 <CheckSquare className="w-4 h-4 text-zinc-500" />
@@ -269,7 +269,7 @@ export const OverviewPage: React.FC = () => {
           </div>
 
           {/* Recent Notes Snippet */}
-          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
             <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800/80">
               <div className="flex items-center gap-2">
                 <FileText className="w-4 h-4 text-zinc-500" />
@@ -317,7 +317,7 @@ export const OverviewPage: React.FC = () => {
         {/* Right Column: Focus Session Quick Widget & Upcoming Deadlines */}
         <div className="space-y-6">
           {/* Quick Focus Widget */}
-          <div className="p-6 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle text-center relative overflow-hidden">
+          <div className="p-6 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle text-center relative overflow-hidden hero-card-silver">
             <div className="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400 mb-4">
               <span className="font-semibold uppercase tracking-wider text-[10px]">
                 {timerMode === 'pomodoro' ? 'Focus Session' : 'Rest Break'}
@@ -375,7 +375,7 @@ export const OverviewPage: React.FC = () => {
           </div>
 
           {/* Upcoming Schedule Card */}
-          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+          <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
             <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800/80">
               <div className="flex items-center gap-2">
                 <CalendarIcon className="w-4 h-4 text-zinc-500" />

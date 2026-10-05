@@ -92,3 +92,22 @@
     transparent 70%
   );
 }
+
+/* Slightly dim silver ambient hover card effect */
+.hero-card-silver {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-card-silver:hover {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.98) 0%, rgba(226, 232, 240, 0.88) 100%) !important;
+  border-color: rgba(148, 163, 184, 0.6) !important;
+  box-shadow: 0 14px 34px -4px rgba(100, 116, 139, 0.15), 0 0 22px rgba(203, 213, 225, 0.45) !important;
+  transform: translateY(-3px);
+}
+
+.dark .hero-card-silver:hover {
+  background: linear-gradient(180deg, rgba(39, 39, 42, 0.95) 0%, rgba(28, 28, 32, 0.98) 100%) !important;
+  border-color: rgba(161, 161, 170, 0.5) !important;
+  box-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.6), 0 0 25px rgba(226, 232, 240, 0.12) !important;
+  transform: translateY(-3px);
+}

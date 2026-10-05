@@ -82,7 +82,7 @@ export const FocusPage: React.FC = () => {
     <div className={`relative flex flex-col items-center justify-center transition-all overflow-hidden ${
       isZenMode 
         ? 'fixed inset-0 z-50 bg-white dark:bg-zinc-950 p-6 flex flex-col justify-center' 
-        : 'py-6 sm:py-10 max-w-2xl mx-auto rounded-2xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white/50 dark:bg-zinc-900/40 backdrop-blur-xs'
+        : 'py-6 sm:py-10 max-w-2xl mx-auto rounded-2xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white/50 dark:bg-zinc-900/40 backdrop-blur-xs hero-card-silver'
     }`}>
       {/* Dynamic ambient glow behind the timer */}
       <div className={`absolute inset-0 pointer-events-none transition-opacity duration-700 ${
@@ -241,7 +241,7 @@ export const FocusPage: React.FC = () => {
         </p>
 
         {/* Subject & Task Linker controls */}
-        <div className="w-full mt-8 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 space-y-3">
+        <div className="w-full mt-8 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 space-y-3 hero-card-silver">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
             <div className="w-full sm:w-1/2">
               <label className="block text-zinc-400 text-[11px] mb-1 font-medium text-left">

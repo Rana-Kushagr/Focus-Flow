@@ -51,8 +51,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, onCloseMobile }) =
     <div className="flex flex-col h-full bg-white dark:bg-zinc-900/90 border-r border-zinc-200/80 dark:border-zinc-800/80 select-none">
       {/* Brand Header */}
       <div className="h-14 flex items-center justify-between px-5 border-b border-zinc-100 dark:border-zinc-800/60">
-        <NavLink to="/dashboard" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-white dark:text-zinc-900 shadow-xs transition-transform group-hover:scale-105">
+        <NavLink to="/" title="Return to Homepage" className="flex items-center gap-2.5 group cursor-pointer">
+          <div className="w-8 h-8 rounded-lg bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-white dark:text-zinc-900 shadow-xs transition-transform group-hover:scale-110">
             <Sparkles className="w-4 h-4 fill-current" />
           </div>
           <div>

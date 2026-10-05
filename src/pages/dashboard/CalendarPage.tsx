@@ -169,7 +169,7 @@ export const CalendarPage: React.FC = () => {
       {/* Main Grid: Calendar (Left 8 cols) & Selected Day Drawer (Right 4 cols) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Calendar Grid (8 cols) */}
-        <div className="lg:col-span-8 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden">
+        <div className="lg:col-span-8 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden hero-card-silver">
           {/* Day of Week Headers */}
           <div className="grid grid-cols-7 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 text-center py-2.5">
             {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
@@ -242,7 +242,7 @@ export const CalendarPage: React.FC = () => {
         </div>
 
         {/* Selected Day Agenda Drawer (4 cols) */}
-        <div className="lg:col-span-4 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle p-5 flex flex-col">
+        <div className="lg:col-span-4 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle p-5 flex flex-col hero-card-silver">
           <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800">
             <div>
               <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-400">

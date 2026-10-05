@@ -147,7 +147,7 @@ export const NotesPage: React.FC = () => {
       {/* Main Two-Pane Container */}
       <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Left Pane: Notes List (4 cols) */}
-        <div className="md:col-span-4 flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden">
+        <div className="md:col-span-4 flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden hero-card-silver">
           {/* Search & Filter Header */}
           <div className="p-3 border-b border-zinc-100 dark:border-zinc-800 space-y-2">
             <div className="relative">
@@ -225,7 +225,7 @@ export const NotesPage: React.FC = () => {
         </div>
 
         {/* Right Pane: Active Editor & Preview (8 cols) */}
-        <div className="md:col-span-8 flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden">
+        <div className="md:col-span-8 flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-xl shadow-subtle overflow-hidden hero-card-silver">
           {activeNote ? (
             <>
               {/* Note Toolbar Header */}

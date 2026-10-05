@@ -186,7 +186,7 @@ export const TasksPage: React.FC = () => {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-3">
+      <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-3 hero-card-silver">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           {/* Search box */}
           <div className="relative flex-1">

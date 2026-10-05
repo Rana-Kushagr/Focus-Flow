@@ -98,7 +98,7 @@ export const AnalyticsPage: React.FC = () => {
 
       {/* Top Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
           <div className="flex items-center justify-between text-zinc-500 text-xs">
             <span>Weekly Study Time</span>
             <Clock className="w-4 h-4 text-zinc-400" />
@@ -111,7 +111,7 @@ export const AnalyticsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
           <div className="flex items-center justify-between text-zinc-500 text-xs">
             <span>Current Streak</span>
             <Flame className="w-4 h-4 text-amber-500 fill-amber-500" />
@@ -124,7 +124,7 @@ export const AnalyticsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
           <div className="flex items-center justify-between text-zinc-500 text-xs">
             <span>Task Completion Rate</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -137,7 +137,7 @@ export const AnalyticsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+        <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
           <div className="flex items-center justify-between text-zinc-500 text-xs">
             <span>Focus Sessions</span>
             <BookOpen className="w-4 h-4 text-brand-500" />
@@ -154,7 +154,7 @@ export const AnalyticsPage: React.FC = () => {
       {/* Two Column Visualizations */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Weekly Focus Time Bar Chart (7 cols) */}
-        <div className="lg:col-span-7 p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+        <div className="lg:col-span-7 p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
           <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800">
             <div>
               <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Weekly Focus Hours</h3>
@@ -207,7 +207,7 @@ export const AnalyticsPage: React.FC = () => {
         </div>
 
         {/* Subject Distribution Donut Chart (5 cols) */}
-        <div className="lg:col-span-5 p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle flex flex-col">
+        <div className="lg:col-span-5 p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle flex flex-col hero-card-silver">
           <div className="pb-4 border-b border-zinc-100 dark:border-zinc-800">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Subject Distribution</h3>
             <p className="text-[11px] text-zinc-400 mt-0.5">Hours divided across academic courses</p>
@@ -261,7 +261,7 @@ export const AnalyticsPage: React.FC = () => {
       </div>
 
       {/* Task Completion Trend Area Chart */}
-      <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle">
+      <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hero-card-silver">
         <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800">
           <div>
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Study Momentum Trend</h3>

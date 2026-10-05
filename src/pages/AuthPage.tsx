@@ -61,7 +61,7 @@ export const AuthPage: React.FC = () => {
       </div>
 
       <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white dark:bg-zinc-900 py-8 px-6 sm:px-10 border border-zinc-200/80 dark:border-zinc-800 rounded-2xl shadow-xl space-y-6">
+        <div className="bg-white dark:bg-zinc-900 py-8 px-6 sm:px-10 border border-zinc-200/80 dark:border-zinc-800 rounded-2xl shadow-xl space-y-6 hero-card-silver">
           {/* Quick Evaluator Access Banner */}
           <div className="p-4 rounded-xl bg-brand-50/70 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-900/60">
             <div className="flex items-start gap-3">

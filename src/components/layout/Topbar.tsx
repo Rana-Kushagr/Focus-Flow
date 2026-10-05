@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { 
   Menu, 
   Search, 
@@ -9,7 +9,8 @@ import {
   Clock, 
   User, 
   LogOut, 
-  ExternalLink 
+  ExternalLink,
+  Sparkles
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -37,11 +38,21 @@ export const Topbar: React.FC<TopbarProps> = ({ onToggleMobileMenu }) => {
 
   return (
     <header className="h-14 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/80 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-20">
-      {/* Left section: Hamburger (mobile) & Search button */}
-      <div className="flex items-center gap-3">
+      {/* Left section: Logo icon, Hamburger (mobile) & Search button */}
+      <div className="flex items-center gap-2 sm:gap-3">
+        <Link 
+          to="/" 
+          title="Return to Homepage" 
+          className="flex items-center p-1 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors group cursor-pointer"
+        >
+          <div className="w-7 h-7 rounded-lg bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-white dark:text-zinc-900 shadow-xs transition-transform group-hover:scale-110">
+            <Sparkles className="w-3.5 h-3.5 fill-current" />
+          </div>
+        </Link>
+
         <button
           onClick={onToggleMobileMenu}
-          className="md:hidden p-2 -ml-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          className="md:hidden p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
           aria-label="Open navigation menu"
         >
           <Menu className="w-5 h-5" />

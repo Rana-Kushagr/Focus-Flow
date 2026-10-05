@@ -209,7 +209,7 @@ export const LandingPage: React.FC = () => {
             opacity: mockupOpacity,
             transformStyle: 'preserve-3d',
           }}
-          className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl shadow-2xl overflow-hidden transition-shadow hover:shadow-brand-500/10"
+          className="hero-card-silver rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl shadow-2xl overflow-hidden cursor-default"
         >
           {/* Mockup Titlebar with Browser Controls & Tab Switcher */}
           <div className="px-4 py-3 bg-zinc-50/90 dark:bg-zinc-950/90 border-b border-zinc-200/70 dark:border-zinc-800/80 flex items-center justify-between">
@@ -271,17 +271,17 @@ export const LandingPage: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                  <div className="hero-card-silver p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer">
                     <p className="text-xs text-zinc-400 font-medium">Tasks</p>
                     <p className="text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-100 mt-1">12</p>
                     <p className="text-[11px] text-emerald-600 mt-1">5 completed today</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                  <div className="hero-card-silver p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer">
                     <p className="text-xs text-zinc-400 font-medium">Focus</p>
                     <p className="text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-100 mt-1">3h 42m</p>
                     <p className="text-[11px] text-indigo-600 mt-1">92% of daily target</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                  <div className="hero-card-silver p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 cursor-pointer">
                     <p className="text-xs text-zinc-400 font-medium">Streak</p>
                     <p className="text-2xl font-bold font-mono text-zinc-900 dark:text-zinc-100 mt-1">7 days</p>
                     <p className="text-[11px] text-amber-500 mt-1">🔥 Top 5% discipline</p>
@@ -289,7 +289,7 @@ export const LandingPage: React.FC = () => {
                 </div>
 
                 {/* Today's Tasks Interactive Checklist */}
-                <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                <div className="hero-card-silver p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
                   <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800 text-xs font-semibold text-zinc-900 dark:text-zinc-100">
                     <span>Today's Tasks</span>
                     <span className="text-[10px] text-zinc-400">Click to toggle live</span>
@@ -450,7 +450,7 @@ export const LandingPage: React.FC = () => {
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="p-6 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
+                className="p-6 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 shadow-subtle hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors hero-card-silver"
               >
                 <div className={`w-10 h-10 rounded-xl ${feature.color} flex items-center justify-center mb-4 shadow-2xs`}>
                   <Icon className="w-5 h-5" />
@@ -569,7 +569,7 @@ export const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="p-6 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 shadow-subtle flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-zinc-800 shadow-subtle flex flex-col justify-between hero-card-silver"
             >
               <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed italic">
                 "{item.quote}"

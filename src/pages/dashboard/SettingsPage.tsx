@@ -88,7 +88,7 @@ export const SettingsPage: React.FC = () => {
       {/* Main Form */}
       <form onSubmit={handleSaveProfile} className="space-y-6">
         {/* Profile Section */}
-        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4 hero-card-silver">
           <div className="flex items-center gap-2 pb-3 border-b border-zinc-100 dark:border-zinc-800">
             <User className="w-4 h-4 text-zinc-500" />
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Student Profile</h3>
@@ -146,7 +146,7 @@ export const SettingsPage: React.FC = () => {
         </div>
 
         {/* Appearance Section */}
-        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4 hero-card-silver">
           <div className="flex items-center gap-2 pb-3 border-b border-zinc-100 dark:border-zinc-800">
             <Moon className="w-4 h-4 text-zinc-500" />
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Appearance & Theme</h3>
@@ -231,7 +231,7 @@ export const SettingsPage: React.FC = () => {
         </div>
 
         {/* Study Timer Preferences */}
-        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4">
+        <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4 hero-card-silver">
           <div className="flex items-center gap-2 pb-3 border-b border-zinc-100 dark:border-zinc-800">
             <Sliders className="w-4 h-4 text-zinc-500" />
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Pomodoro Timer Durations</h3>
@@ -319,7 +319,7 @@ export const SettingsPage: React.FC = () => {
       </form>
 
       {/* Data Management Section */}
-      <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4">
+      <div className="p-5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-subtle space-y-4 hero-card-silver">
         <div className="flex items-center gap-2 pb-3 border-b border-zinc-100 dark:border-zinc-800">
           <ShieldCheck className="w-4 h-4 text-zinc-500" />
           <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Data & Storage Management</h3>
