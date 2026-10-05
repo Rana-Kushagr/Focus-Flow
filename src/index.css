@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(82, 82, 91, 0.5);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(82, 82, 91, 0.8);
+}
+
+/* Modern Restrained Engineering Background Patterns */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
+/* Subtle ambient spotlight mask */
+.ambient-spotlight {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 0%, 
+    rgba(99, 102, 241, 0.12), 
+    transparent 70%
+  );
+}
+
+.dark .ambient-spotlight {
+  background: radial-gradient(
+    ellipse 65% 55% at 50% -10%, 
+    rgba(124, 58, 237, 0.16), 
+    transparent 70%
+  );
+}
+
+/* Secondary calm emerald glow for focus sessions */
+.ambient-focus-glow {
+  background: radial-gradient(
+    ellipse 50% 50% at 50% 50%, 
+    rgba(16, 185, 129, 0.08), 
+    transparent 70%
+  );
+}
+
+.dark .ambient-focus-glow {
+  background: radial-gradient(
+    ellipse 50% 50% at 50% 50%, 
+    rgba(16, 185, 129, 0.10), 
+    transparent 70%
+  );
+}
